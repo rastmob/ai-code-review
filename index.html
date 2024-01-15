@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Code Review</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://rastmobile.com/wp-content/uploads/2022/08/Rastmobile-Logo.svg"
+        alt="Rastmobile Logo"
+        class="logo"
+      />
+      <h1>AI Code Review</h1>
+    </header>
+    <main>
+      <form id="repoForm">
+        <label for="repo_url">GitHub Repository URL:</label>
+        <input
+          type="text"
+          id="repo_url"
+          name="repo_url"
+          placeholder="Enter GitHub Repo URL"
+          required
+        />
+        <button type="submit">Review Repository</button>
+      </form>
+    </main>
+    <script>
+      document
+        .getElementById("repoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var repoUrl = document.getElementById("repo_url").value;
+          window.location.href =
+            "/check-repo?repo_url=" + encodeURIComponent(repoUrl);
+        });
+    </script>
+  </body>
+</html>

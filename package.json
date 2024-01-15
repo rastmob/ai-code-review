@@ -17,6 +17,12 @@
       "url": "https://github.com/rastmob/ai-code-review/issues",
       "email": "contact@rastmobile.com"
     },
-    "homepage": "https://www.rastmobile.com"
+    "homepage": "https://www.rastmobile.com",
+    "dependencies": {
+      "express": "^4.17.1",
+      "axios": "^0.21.1",
+      "dotenv": "^8.2.0",
+    "openai": "^3.3.0"
+    }
   }
   
